@@ -91,4 +91,10 @@ view: stackoverflow_users {
     type: count
     drill_fields: [id, display_name]
   }
+
+  measure: total_votes {
+    type: sum
+    sql:${up_votes} ;;
+    drill_fields: [id, display_name]
+  }
 }
