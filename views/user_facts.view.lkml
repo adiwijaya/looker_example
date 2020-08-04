@@ -1,14 +1,20 @@
 view: stackoverflow_user_facts {
 
   derived_table: {
-    sql: SELECT count(1) as cnt_loc FROM stackoverflow_users GROUP BY location;;
+    sql: SELECT count(1) as cnt_loc, location FROM stackoverflow_users GROUP BY location;;
   }
 
   # Define your dimensions and measures here, like this:
   dimension: cnt_loc {
-    description: "Unique ID for each user that has ordered"
+    description: "Cnt Loc"
     type: number
     sql: ${TABLE}.cnt_loc ;;
+  }
+
+  dimension: location {
+    description: "Location"
+    type: string
+    sql: ${TABLE}.location ;;
   }
 
   # # You can specify the table name if it's different from the view name:
