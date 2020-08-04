@@ -97,4 +97,5 @@ view: stackoverflow_users {
     sql:${up_votes} ;;
     drill_fields: [id, display_name]
   }
+
 }
