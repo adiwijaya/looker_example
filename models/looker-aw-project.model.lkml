@@ -15,3 +15,5 @@ explore: stackoverflow_post_fact_user_partitioned_clustered_table {}
 explore: stackoverflow_post_history {}
 
 explore: stackoverflow_users {}
+
+explore: stackoverflow_user_facts {}
