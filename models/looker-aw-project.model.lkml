@@ -17,3 +17,5 @@ explore: stackoverflow_post_history {}
 explore: stackoverflow_users {}
 
 explore: stackoverflow_user_facts {}
+
+explore: sql_runner_query_1 {}
