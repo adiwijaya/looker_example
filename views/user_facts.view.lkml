@@ -2,6 +2,8 @@ view: stackoverflow_user_facts {
 
   derived_table: {
     sql: SELECT count(1) as cnt_loc, location FROM stackoverflow_users GROUP BY location;;
+
+    persist_for : "1 hour"
   }
 
   # Define your dimensions and measures here, like this:
