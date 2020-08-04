@@ -1,4 +1,4 @@
-view: user_facts {
+view: stackoverflow_user_facts {
 
   derived_table: {
     sql: SELECT count(1) as cnt_loc FROM stackoverflow_users GROUP BY location;;
