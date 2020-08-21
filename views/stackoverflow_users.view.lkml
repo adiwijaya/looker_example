@@ -46,6 +46,11 @@ view: stackoverflow_users {
     sql: ${TABLE}.down_votes ;;
   }
 
+  dimension: sum2_down_votes {
+    type: number
+    sql: SELECT SUM(${down_votes}) FROM ${TABLE}.down_votes ;;
+  }
+
   measure: avg_down_votes {
     type :  average
     sql:  ${down_votes} ;;
