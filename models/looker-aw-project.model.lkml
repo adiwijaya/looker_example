@@ -10,7 +10,7 @@ datagroup: looker_aw_project_default_datagroup {
 
 access_grant: test_access_grant {
   user_attribute: aw_user_attribute
-  allowed_values: ["1"]
+  allowed_values: ["10"]
 
 }
 
