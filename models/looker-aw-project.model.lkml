@@ -16,17 +16,16 @@ access_grant: test_access_grant {
 
 persist_with: looker_aw_project_default_datagroup
 
-explore: stackoverflow_post_fact_user_partitioned_clustered_table {}
+explore: stackoverflow_post_fact_user_partitioned_clustered_table {
+  access_filter: {
+    field: user_id
+    user_attribute: aw_user_attribute
+  }
+}
 
 explore: stackoverflow_post_history {}
 
-explore: stackoverflow_users {
-  access_filter: {
-    field: age
-    user_attribute: aw_user_attribute
-
-  }
-}
+explore: stackoverflow_users {}
 
 explore: stackoverflow_user_facts {}
 
