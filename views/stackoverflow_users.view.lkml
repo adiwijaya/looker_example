@@ -15,9 +15,14 @@ view: stackoverflow_users {
   }
 
   dimension: age {
-    type: string
+    type: number
     sql: ${TABLE}.age ;;
     required_access_grants: [test_access_grant]
+  }
+
+  measure: avg_age {
+    type :  average
+    sql:  ${age} ;;
   }
 
   dimension_group: creation {
