@@ -17,6 +17,7 @@ view: stackoverflow_users {
   dimension: age {
     type: string
     sql: ${TABLE}.age ;;
+    required_access_grants: [test_access_grant]
   }
 
   dimension_group: creation {

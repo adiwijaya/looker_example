@@ -8,6 +8,12 @@ datagroup: looker_aw_project_default_datagroup {
   max_cache_age: "1 hour"
 }
 
+access_grant: test_access_grant {
+  user_attribute: aw_user_attribute
+  allowed_values: ["1"]
+
+}
+
 persist_with: looker_aw_project_default_datagroup
 
 explore: stackoverflow_post_fact_user_partitioned_clustered_table {}
