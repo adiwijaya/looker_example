@@ -16,14 +16,11 @@ view: stackoverflow_users {
   }
 
   dimension: age {
-    type: number
+    type: string
     sql: ${TABLE}.age ;;
   }
 
-  measure: avg_age {
-    type :  average
-    sql:  ${age} ;;
-  }
+
 
   dimension_group: creation {
     type: time
@@ -47,6 +44,16 @@ view: stackoverflow_users {
   dimension: down_votes {
     type: number
     sql: ${TABLE}.down_votes ;;
+  }
+
+  measure: avg_down_votes {
+    type :  average
+    sql:  ${down_votes} ;;
+  }
+
+  measure: sum_down_votes {
+    type :  sum
+    sql:  ${down_votes} ;;
   }
 
   dimension_group: last_access {
