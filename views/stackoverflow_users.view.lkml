@@ -12,12 +12,12 @@ view: stackoverflow_users {
   dimension: about_me {
     type: string
     sql: ${TABLE}.about_me ;;
+    required_access_grants: [test_access_grant]
   }
 
   dimension: age {
     type: number
     sql: ${TABLE}.age ;;
-    required_access_grants: [test_access_grant]
   }
 
   measure: avg_age {
