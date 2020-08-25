@@ -41,15 +41,17 @@ view: stackoverflow_users {
     sql: ${TABLE}.display_name ;;
   }
 
+
+  dimension: capital_display_name {
+    type: string
+    sql: UPPER(${TABLE}.display_name) ;;
+  }
+
   dimension: down_votes {
     type: number
     sql: ${TABLE}.down_votes ;;
   }
 
-  dimension: sum2_down_votes {
-    type: number
-    sql: SELECT SUM(${down_votes}) FROM ${TABLE}.down_votes ;;
-  }
 
   measure: avg_down_votes {
     type :  average

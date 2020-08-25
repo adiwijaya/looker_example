@@ -25,7 +25,15 @@ explore: stackoverflow_post_fact_user_partitioned_clustered_table {
 
 explore: stackoverflow_post_history {}
 
-explore: stackoverflow_users {}
+explore: stackoverflow_users {
+  join: stackoverflow_post_history {
+    sql_on: ${stackoverflow_users.id} = ${stackoverflow_post_history.user_id} ;;
+    fields: [stackoverflow_post_history.count,stackoverflow_post_history.comment]
+    sql_where: ${stackoverflow_post_history.comment} IS NOT null ;;
+    relationship: one_to_many
+  }
+
+}
 
 explore: stackoverflow_user_facts {}
 
