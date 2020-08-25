@@ -32,6 +32,7 @@ explore: stackoverflow_users {
     sql_where: ${stackoverflow_post_history.comment} IS NOT null ;;
     relationship: one_to_many
   }
+  sql_always_where: ${age} > 30 ;;
 
 }
 
