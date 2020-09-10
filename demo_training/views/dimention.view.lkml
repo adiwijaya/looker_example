@@ -1,5 +1,5 @@
 view: dimention {
-  sql_table_name: demo.dimention2 ;;
+  sql_table_name: demo.dimention ;;
   measure: count {
     type: count
     drill_fields: [detail*]
