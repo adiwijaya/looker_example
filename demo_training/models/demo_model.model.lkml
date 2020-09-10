@@ -5,8 +5,6 @@ include: "/demo_training/views/**/*.view"                # include all views in 
 # include: "my_dashboard.dashboard.lookml"   # include a LookML dashboard called my_dashboard
 
 
-explore: eth_transaction_summary_partitioned{}
-
 explore: demo_vote_timestamp_2{}
 
 

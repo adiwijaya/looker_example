@@ -1,8 +1,5 @@
 view: demo_vote_timestamp_2 {
-  derived_table: {
-    sql: SELECT * FROM `aw-general-dev.demo.demo_vote_timestamp_2`
-      ;;
-  }
+  sql_table_name: `demo.demo_vote_timestamp_2`;;
 
   measure: count {
     type: count
