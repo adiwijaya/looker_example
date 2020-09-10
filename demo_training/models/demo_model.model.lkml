@@ -10,7 +10,7 @@ explore: demo_vote_timestamp_2{}
 
 explore: dimention {
   join: facts {
-    relationship: many_to_one
+    relationship:  one_to_many
     sql_on: ${facts.id} = ${dimention.id} ;;
   }
 }
