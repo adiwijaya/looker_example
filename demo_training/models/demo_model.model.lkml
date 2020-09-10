@@ -7,6 +7,8 @@ include: "/demo_training/views/**/*.view"                # include all views in 
 
 explore: eth_transaction_summary_partitioned{}
 
+explore: demo_vote_timestamp_2{}
+
 
 # # Select the views that should be a part of this model,
 # # and define the joins that connect them together.
