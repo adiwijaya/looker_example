@@ -32,7 +32,10 @@ explore: stackoverflow_users {
     sql_where: ${stackoverflow_post_history.comment} IS NOT null ;;
     relationship: one_to_many
   }
-  sql_always_where: ${age} > 30 ;;
+  sql_always_where: ${reputation} > 1000;;
+  always_filter: {
+    filters: [location: "Nigeria"]
+  }
 
 }
 

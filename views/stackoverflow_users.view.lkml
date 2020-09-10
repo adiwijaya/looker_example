@@ -50,6 +50,7 @@ view: stackoverflow_users {
   dimension: down_votes {
     type: number
     sql: ${TABLE}.down_votes ;;
+    hidden: yes
   }
 
 
@@ -99,7 +100,7 @@ view: stackoverflow_users {
 
   dimension: views {
     type: number
-    sql: ${TABLE}.views ;;
+    sql: ${TABLE}.views2 ;;
   }
 
   dimension: website_url {
