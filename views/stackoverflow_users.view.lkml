@@ -100,7 +100,7 @@ view: stackoverflow_users {
 
   dimension: views {
     type: number
-    sql: ${TABLE}.views2 ;;
+    sql: ${TABLE}.views ;;
   }
 
   dimension: website_url {
