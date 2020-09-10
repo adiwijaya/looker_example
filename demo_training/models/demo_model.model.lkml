@@ -7,6 +7,12 @@ include: "/demo_training/views/**/*.view"                # include all views in 
 
 explore: demo_vote_timestamp_2{}
 
+explore: audit_log_table {
+  access_filter: {
+    field: log_url
+    user_attribute: aw_demo_status
+  }
+}
 
 # # Select the views that should be a part of this model,
 # # and define the joins that connect them together.
