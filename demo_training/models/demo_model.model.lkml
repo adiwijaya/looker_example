@@ -7,6 +7,10 @@ include: "/demo_training/views/**/*.view"                # include all views in 
 
 explore: demo_vote_timestamp_2{}
 
+explore: facts{}
+
+explore: dimention {}
+
 explore: audit_log_table {
   access_filter: {
     field: log_url
