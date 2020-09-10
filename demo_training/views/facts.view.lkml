@@ -21,6 +21,18 @@ view: facts {
     sql: ${TABLE}.time ;;
   }
 
+  measure: sum_id  {
+    type: sum
+    sql: ${id} ;;
+  }
+
+  measure: list_value  {
+    type: list
+    list_field: value
+    drill_fields: [detail*]
+  }
+
+
   set: detail {
     fields: [id, value, time_time]
   }

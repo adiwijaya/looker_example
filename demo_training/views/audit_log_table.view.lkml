@@ -23,6 +23,7 @@ view: audit_log_table {
   }
 
   dimension: log_url {
+    hidden: yes
     type: string
     sql: ${TABLE}.log_url ;;
   }

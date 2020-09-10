@@ -9,7 +9,8 @@ explore: demo_vote_timestamp_2{}
 
 
 explore: dimention {
-  sql_always_where: ${facts.id} = 1 ;;
+  sql_always_where: ${id} = 1 AND ${name} LIKE '%1%';;
+  always_join: [facts]
   join: facts {
     relationship:  one_to_many
     sql_on: ${facts.id} = ${dimention.id} ;;
@@ -27,6 +28,9 @@ access_grant: col_block {
   user_attribute: aw_demo_status
   allowed_values: ["SUCCESS"]
 }
+
+explore: facts {}
+explore: facts_table_demo {}
 
 
 # # Select the views that should be a part of this model,
