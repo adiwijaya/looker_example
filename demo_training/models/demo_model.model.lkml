@@ -9,6 +9,7 @@ explore: demo_vote_timestamp_2{}
 
 
 explore: dimention {
+  sql_always_where: ${facts.id} = 1 ;;
   join: facts {
     relationship:  one_to_many
     sql_on: ${facts.id} = ${dimention.id} ;;
