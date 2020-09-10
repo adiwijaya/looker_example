@@ -16,7 +16,7 @@ explore: audit_log_table {
 
 access_grant: col_block {
   user_attribute: aw_demo_status
-  allowed_values: ["FAILED"]
+  allowed_values: ["SUCCESS"]
 }
 
 
