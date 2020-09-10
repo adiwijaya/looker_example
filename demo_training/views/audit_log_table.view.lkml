@@ -14,6 +14,7 @@ view: audit_log_table {
   dimension: dag {
     type: string
     sql: ${TABLE}.dag ;;
+    required_access_grants: [col_block]
   }
 
   dimension: exec_date {
