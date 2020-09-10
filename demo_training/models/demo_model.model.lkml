@@ -7,9 +7,13 @@ include: "/demo_training/views/**/*.view"                # include all views in 
 
 explore: demo_vote_timestamp_2{}
 
-explore: facts{}
 
-explore: dimention {}
+explore: dimention {
+  join: facts {
+    relationship: many_to_one
+    sql_on: ${facts.id} = ${dimention.id} ;;
+  }
+}
 
 explore: audit_log_table {
   access_filter: {
