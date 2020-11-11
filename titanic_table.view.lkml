@@ -97,4 +97,9 @@ view: titanic_table {
       home_dest
     ]
   }
+
+  measure: average_age  {
+    type: average
+    sql: ${age} ;;
+  }
 }
