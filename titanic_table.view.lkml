@@ -19,6 +19,14 @@ view: titanic_table {
     sql: ${TABLE}.survived ;;
   }
 
+  dimension: survived_labeled {
+    type: string
+    sql: CASE WHEN ${survived} = 0 THEN 'No'
+    WHEN ${survived} = 1 THEN 'Yes'
+    ELSE NULL END
+    ;;
+  }
+
   dimension: name {
     type: string
     sql: ${TABLE}.name ;;
