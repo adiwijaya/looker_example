@@ -33,6 +33,7 @@ view: facts {
   }
 
 
+
   set: detail {
     fields: [id, value, time_time]
   }

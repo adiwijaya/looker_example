@@ -8,6 +8,7 @@ view: facts_table_demo {
         demo.facts
       GROUP BY
         id ;;
+    datagroup_trigger: datagroup_facts_table_demo
   }
   dimension: id {
     type: number
