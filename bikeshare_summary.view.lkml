@@ -29,6 +29,7 @@ view: bikeshare_summary {
   dimension: trip_diff_percentage {
     type: number
     sql: (${TABLE}.total_trip - ${TABLE}.prev_trip) / ${TABLE}.prev_trip * 100 ;;
+    value_format: "\"😃 \" 0.00\% ; \"😟 \" 0.00\%"
   }
 
 
