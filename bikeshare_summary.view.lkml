@@ -1,14 +1,5 @@
 view: bikeshare_summary {
-  derived_table: {
-    sql: SELECT *, LAG(total_trip) OVER(ORDER BY date ASC) AS prev_trip
-    FROM `aw-sb-project.demo.bikeshare_summary`
-      ;;
-  }
-
-  measure: count {
-    type: count
-    drill_fields: [detail*]
-  }
+  sql_table_name: `aw-sb-project.demo.bikeshare_summary`;;
 
   dimension: date {
     type: date
@@ -21,20 +12,4 @@ view: bikeshare_summary {
     sql: ${TABLE}.total_trip ;;
   }
 
-  dimension: prev_trip {
-    type: number
-    sql: ${TABLE}.prev_trip ;;
-  }
-
-  dimension: trip_diff_percentage {
-    type: number
-    sql: (${TABLE}.total_trip - ${TABLE}.prev_trip) / ${TABLE}.prev_trip * 100 ;;
-    value_format: "\"😃 \" 0.00\% ; \"😟 \" 0.00\%"
-  }
-
-
-
-  set: detail {
-    fields: [date, total_trip,prev_trip]
-  }
 }
