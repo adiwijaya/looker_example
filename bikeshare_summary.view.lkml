@@ -21,8 +21,14 @@ view: bikeshare_summary {
     sql: ${TABLE}.total_trip ;;
   }
 
+  dimension: prev_trip {
+    type: number
+    sql: ${TABLE}.prev_trip ;;
+  }
+
+
 
   set: detail {
-    fields: [date, total_trip]
+    fields: [date, total_trip,prev_trip]
   }
 }
