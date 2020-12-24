@@ -26,7 +26,7 @@ view: bikeshare_summary {
     sql: ${TABLE}.prev_trip ;;
   }
 
-  dimension: diff_perc_trip {
+  dimension: trip_diff_percentage {
     type: number
     sql: (${TABLE}.total_trip - ${TABLE}.prev_trip) / ${TABLE}.prev_trip * 100 ;;
   }
