@@ -1,6 +1,7 @@
 view: bikeshare_summary {
   derived_table: {
-    sql: SELECT * FROM `aw-sb-project.demo.bikeshare_summary`
+    sql: SELECT *, LAG(total_trip) OVER(ORDER BY date DESC) AS prev_trip
+    FROM `aw-sb-project.demo.bikeshare_summary`
       ;;
   }
 
@@ -19,6 +20,7 @@ view: bikeshare_summary {
     type: number
     sql: ${TABLE}.total_trip ;;
   }
+
 
   set: detail {
     fields: [date, total_trip]
