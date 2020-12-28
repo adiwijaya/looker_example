@@ -17,14 +17,12 @@ view: titanic_table {
   dimension: survived {
     type: number
     sql: ${TABLE}.survived ;;
+    hidden: yes
   }
 
   dimension: survived_labeled {
-    type: string
-    sql: CASE WHEN ${survived} = 0 THEN 'No'
-    WHEN ${survived} = 1 THEN 'Yes'
-    ELSE NULL END
-    ;;
+    type: yesno
+    sql: ${survived} = 1;;
   }
 
   dimension: name {
