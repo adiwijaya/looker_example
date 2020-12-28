@@ -23,6 +23,7 @@ view: titanic_table {
   dimension: survived_labeled {
     type: yesno
     sql: ${survived} = 1;;
+    label: "survived"
   }
 
   dimension: name {
